@@ -1,0 +1,20 @@
+# TO BUILD
+# docker build -t lucksjb/desafio-go-prod . -f Dockerfile-prod
+
+# TO RUN 
+# docker run --rm ucksjb/desafio-go-prod
+
+FROM golang:latest AS builder
+
+WORKDIR /go/bin
+
+COPY ./desafio /go/bin
+
+
+FROM scratch
+
+WORKDIR /go/bin 
+
+COPY --from=builder /go/bin .
+
+CMD [ "./desafio" ]

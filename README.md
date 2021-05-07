@@ -6,7 +6,6 @@ O desafio consiste em:
  1. Criar um aplicativo escrito em Golang que ao ser executado escreva  na tela _**Full Cycle Rocks **_. 
  2. Colocar esse aplicativo em uma imagem  docker cujo tamanho máximo não deve ultrapassar os 2MB.
 
-
 ## SOLUÇÃO :
 
 **Criou um Dockerfile que sobe uma imagem Go (**devel**)**
@@ -20,7 +19,6 @@ Após entrar no bash entrar no **_code  . _**  e codificar normalmente no **$(pw
 **Criou novo Dockerfile-prod otimizado para produção**
 **To build:** _docker build -t lucksjb/desafio-go-prod . -f Dockerfile-prod_
 **To run:** *docker run --rm lucksjb/desafio-go-prod*
-
 
 **Ao termino fiz o push para o docker hub:**
 *docker push lucksjb/desafio-go-prod*
